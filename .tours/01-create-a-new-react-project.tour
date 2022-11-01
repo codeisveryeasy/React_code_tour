@@ -1,0 +1,50 @@
+{
+  "$schema": "https://aka.ms/codetour-schema",
+  "title": "01. Create a new react project",
+  "steps": [
+    {
+      "title": "01. Create new react app using command -> create-react-app reactapp",
+      "description": "You can create a new react application running command in terminal/command-prompt:\r\n\r\nλ create-react-app newreactapp\r\n\r\nNote:\r\n1. You need to install node.js runtime from https://nodejs.org/en/\r\n2. After installing node.js runtime, you will be able to run following commands to check if node.js runtime is setup in correct way:\r\n3. You can run following commands at terminal to check:\r\n\r\nλ node -v\r\nv16.18.0\r\n\r\nλ npm -v\r\n8.19.2\r\n\r\n4. If above commands are working fine, you can use npm to install create-react-app (CRA) globally. Run below command to install create-react-app globally\r\n\r\nλ npm i -g create-react-app\r\n\r\n5. You can check if create-react-app is setup in correct way running command:\r\n\r\nλ create-react-app --version\r\n5.0.1\r\n\r\n6. If you are getting the version number, it means that CRA is setup in correct way.\r\n\r\n7. Now, you can use CRA to create new react project as prescribed before step 1"
+    },
+    {
+      "title": "02. Start the react project",
+      "description": "Use the following command in terminal:\r\n\r\n1. change directory to folder -> newreactapp\r\n\r\nλ cd newreactapp\r\n\r\n2. Once you are in -> newreactapp, you can run below command to start the react application\r\n\r\nλ npm run start\r\n\r\n3. It will start the react http server locally and launch the react application in default browser. It is recommended to have Google Chrome as default browser. \r\n\r\n4. React application will launch in browser at address: http://localhost:3000"
+    },
+    {
+      "title": "03. Delete all files from public folder",
+      "description": "Delete all files from public folder"
+    },
+    {
+      "title": "04. Re-create index.html in public folder",
+      "description": "1. Re-create index.html in public folder.\r\n2. Use emmet abbrevation html:5 or ! to get default HTML5 page code.\r\n3. Create a div with id=\"root\" in body.\r\n4. After completion, the index.html will look like below:\r\n```html\r\n<!DOCTYPE html>\r\n<html lang=\"en\">\r\n\r\n<head>\r\n    <meta charset=\"UTF-8\">\r\n    <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\">\r\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\r\n    <title>React Application</title>\r\n</head>\r\n\r\n<body>\r\n    <div id=\"root\"></div>\r\n</body>\r\n\r\n</html>\r\n```\r\n\r\n"
+    },
+    {
+      "title": "05. Delete all files from src folder",
+      "description": "1. Delete all files from src folder\r\n2. Re-create file index.js in src folder\r\n3. Create file root.js in src folder. \r\n4. File root.js will act as a root component.\r\n5. File index.js will act as root component renderer."
+    },
+    {
+      "file": "newreactapp/src/root.js",
+      "description": "Create root component\r\n\r\n1. Use emmet abbrevation imr to setup import for React\r\n2. Use emmet abbrevation ffc to create functional component\r\n3. Give functional component name: RootComponent\r\n4. Return JSX from functional component:\r\n```\r\nreturn (\r\n    <div>\r\n       <h1>Root component</h1>\r\n    </div>   \r\n)\r\n```\r\n5. At the end, root.js will look as below:\r\n```\r\nimport React from 'react';\r\n\r\nfunction RootComponent() {\r\n\r\n    //return JSX\r\n    return ( \r\n        <div>\r\n            <h1>Root Component</h1>\r\n        </div>\r\n     );\r\n}\r\n\r\nexport default RootComponent;\r\n```",
+      "title": "06. Create root component"
+    },
+    {
+      "file": "newreactapp/src/index.js",
+      "selection": {
+        "start": {
+          "line": 1,
+          "character": 1
+        },
+        "end": {
+          "line": 6,
+          "character": 49
+        }
+      },
+      "description": "1. Setup index.js as root component renderer using below code\r\n```\r\nimport React from 'react';\r\nimport ReactDOM from 'react-dom/client';\r\nimport RootComponent from './root';\r\n\r\nlet location = ReactDOM.createRoot(document.getElementById(\"root\"))\r\nlocation.render(<RootComponent></RootComponent>)\r\n```",
+      "title": "07. Setup index.js as root component renderer"
+    },
+    {
+      "title": "08. Refresh browser",
+      "description": "Refresh browser. The browser should show \"Root Component\" in h1 heading format.\r\n\r\nCongratulations, you have just finished creating first react application with root component.\r\n\r\nThough, it does not do much. It is very basic but it is a good start.\r\n\r\nYou can think of it as \"Hello World\" of react application."
+    }
+  ]
+}
