@@ -1,0 +1,33 @@
+{
+  "$schema": "https://aka.ms/codetour-schema",
+  "title": "02-create-first-custom-component",
+  "steps": [
+    {
+      "title": "01. Create folder -> components in src folder",
+      "description": "1. Create folder -> components in src folder\r\n2. Create file header.js in components folder\r\n3. We are creating Header Component. It is custom component.\r\n"
+    },
+    {
+      "title": "02. Add code to header component",
+      "description": "# Create first custom component\r\n### 1. Open header.js\r\n### 2. Add import for react using emmet -> imr\r\n```javascript\r\n   import React from 'react';\r\n```\r\n### 3. Add functional component template using emmet -> ffc\r\n```javascript\r\n    function () {\r\n        return (  );\r\n    }\r\n\r\n    export default ;\r\n```\r\n### 4. Give name 'HeaderComponent' (without space) to the functional component.\r\n```javascript\r\n    function HeaderComponent() {\r\n        return (  );\r\n    }\r\n\r\n    export default HeaderComponent;\r\n\r\n```\r\n### 5. Make HeaderComponent return JSX in return block.\r\n```javascript\r\n    return ( \r\n        <div>\r\n            <h1>This is header component!</h1>\r\n        </div>\r\n     );\r\n```\r\n"
+    },
+    {
+      "file": "newreactapp/src/root.js",
+      "selection": {
+        "start": {
+          "line": 1,
+          "character": 1
+        },
+        "end": {
+          "line": 14,
+          "character": 30
+        }
+      },
+      "description": "# Load Header component in Root component\r\n\r\n### 1. Use <HeaderComponent> in root component\r\n```javascript\r\n<HeaderComponent></HeaderComponent>\r\n```\r\n### 2. As you will type <Heade...> VS Code auto-assist will suggest the file import for Header Component.\r\n### 3. You must import the path suggested by auto-assist.\r\n```javascript\r\nimport HeaderComponent from './components/header';\r\n```\r\n### 4. Root component (root.js) will look like below after loading Header component (header.js)\r\n```javascript\r\nimport React from 'react';\r\nimport HeaderComponent from './components/header';\r\nfunction RootComponent() {\r\n\r\n    //return JSX\r\n    return ( \r\n        <div>\r\n            <h1>Root Component</h1>\r\n            <HeaderComponent></HeaderComponent>\r\n        </div>\r\n     );\r\n}\r\n\r\nexport default RootComponent;\r\n```",
+      "title": "03. Load Header component in Root component"
+    },
+    {
+      "title": "04. Refresh the browser",
+      "description": "# Take a look at browser to see the view of header component in root component\r\n\r\n### 1. You are not required to reload the browser.\r\n### 2. React http server must do the live-reload."
+    }
+  ]
+}
